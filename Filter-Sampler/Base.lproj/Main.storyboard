@@ -1,29 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Filter_Sampler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="euP-cs-HT4"/>
+                        <viewControllerLayoutGuide type="bottom" id="KoV-cw-81A"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="c1R-FQ-JR8">
-                                <rect key="frame" x="20" y="20" width="280" height="406"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1R-FQ-JR8">
+                                <rect key="frame" x="24" y="20" width="552" height="310.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c1R-FQ-JR8" secondAttribute="height" multiplier="16:9" id="WAA-Uc-c03"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hun-aw-boE">
+                                <rect key="frame" x="277" y="375" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="didSelectPickerBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KO-PY-mKZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c1R-FQ-JR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="Ddt-q1-bYb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="c1R-FQ-JR8" secondAttribute="trailing" constant="4" id="EpZ-F3-bwv"/>
+                            <constraint firstItem="hun-aw-boE" firstAttribute="top" secondItem="c1R-FQ-JR8" secondAttribute="bottom" constant="44.5" id="F3r-xV-lva"/>
+                            <constraint firstItem="hun-aw-boE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UrX-GX-J7F"/>
+                            <constraint firstItem="c1R-FQ-JR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="Zue-7R-Ird"/>
+                            <constraint firstItem="c1R-FQ-JR8" firstAttribute="top" secondItem="euP-cs-HT4" secondAttribute="bottom" id="dTp-Hu-qNq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="c1R-FQ-JR8" id="Qcm-XW-Snh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="162" y="406"/>
+            <point key="canvasLocation" x="303" y="428"/>
         </scene>
     </scenes>
 </document>
