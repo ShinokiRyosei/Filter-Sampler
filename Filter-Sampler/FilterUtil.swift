@@ -35,7 +35,19 @@ class FilterUtil: NSObject {
         filter.setValue(1.0, forKey: "inputSaturation")
         filter.setValue(0.5, forKey: "inputBrightness")
         filter.setValue(3.0, forKey: "inputContrast")
-        return outputImage(filter, original: img)
+        return self.outputImage(filter, original: img)
+    }
+    // トーンカーブ
+    func toneCurveFilter(original img: UIImage) -> UIImage {
+        guard let filter: CIFilter = CIFilter(name: "CIToneCurve") else { return img }
+        guard let ciImage: CIImage = CIImage(image: img) else { return img }
+        filter.setValue(ciImage, forKey: kCIInputImageKey)
+        filter.setValue(CIVector(x: 0.0, y: 0.0), forKey: "inputPoint0")
+        filter.setValue(CIVector(x: 0.25, y: 0.1), forKey: "inputPoint1")
+        filter.setValue(CIVector(x: 0.5, y: 0.5), forKey: "inputPoint2")
+        filter.setValue(CIVector(x: 0.75, y: 0.9), forKey: "inputPoint3")
+        filter.setValue(CIVector(x: 1.0, y: 1.0), forKey: "inputPoint4")
+        return self.outputImage(filter, original: img)
     }
     
     func outputImage(filter: CIFilter, original img: UIImage) -> UIImage {
