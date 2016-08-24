@@ -27,8 +27,16 @@ class FilterUtil: NSObject {
         filter.setValue(1.0, forKey: "inputIntensity")
         return self.outputImage(filter, original: img)
     }
-    
-    
+    // 色調節フィルタ
+    func ajustmentFilter(original img: UIImage) -> UIImage {
+        guard let filter: CIFilter = CIFilter(name: "CIColorControl") else { return img }
+        guard let ciImage: CIImage = CIImage(image: img) else { return img }
+        filter.setValue(ciImage, forKey: kCIInputImageKey)
+        filter.setValue(1.0, forKey: "inputSaturation")
+        filter.setValue(0.5, forKey: "inputBrightness")
+        filter.setValue(3.0, forKey: "inputContrast")
+        return outputImage(filter, original: img)
+    }
     
     func outputImage(filter: CIFilter, original img: UIImage) -> UIImage {
         let context: CIContext = CIContext(options: nil)
