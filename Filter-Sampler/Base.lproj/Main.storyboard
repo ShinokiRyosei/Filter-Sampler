@@ -26,24 +26,49 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hun-aw-boE">
-                                <rect key="frame" x="277" y="375" width="46" height="30"/>
+                                <rect key="frame" x="277" y="348" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="didSelectPickerBtn" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KO-PY-mKZ"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="4lz-WC-OFu">
+                                <rect key="frame" x="0.0" y="413" width="600" height="187"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ulB-yH-4B1">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YMQ-A5-ntV">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="KoV-cw-81A" firstAttribute="top" secondItem="4lz-WC-OFu" secondAttribute="bottom" id="5UD-pE-nwz"/>
+                            <constraint firstItem="4lz-WC-OFu" firstAttribute="top" secondItem="hun-aw-boE" secondAttribute="bottom" constant="35" id="9y6-4f-TIO"/>
                             <constraint firstItem="c1R-FQ-JR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="Ddt-q1-bYb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c1R-FQ-JR8" secondAttribute="trailing" constant="4" id="EpZ-F3-bwv"/>
-                            <constraint firstItem="hun-aw-boE" firstAttribute="top" secondItem="c1R-FQ-JR8" secondAttribute="bottom" constant="44.5" id="F3r-xV-lva"/>
+                            <constraint firstItem="hun-aw-boE" firstAttribute="top" secondItem="c1R-FQ-JR8" secondAttribute="bottom" constant="17.5" id="F3r-xV-lva"/>
+                            <constraint firstItem="4lz-WC-OFu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="LFJ-jB-2dc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4lz-WC-OFu" secondAttribute="trailing" constant="-20" id="QGI-eQ-YY4"/>
                             <constraint firstItem="hun-aw-boE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UrX-GX-J7F"/>
                             <constraint firstItem="c1R-FQ-JR8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="Zue-7R-Ird"/>
                             <constraint firstItem="c1R-FQ-JR8" firstAttribute="top" secondItem="euP-cs-HT4" secondAttribute="bottom" id="dTp-Hu-qNq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="filterCollectionView" destination="4lz-WC-OFu" id="Xuq-UX-xcN"/>
                         <outlet property="imageView" destination="c1R-FQ-JR8" id="Qcm-XW-Snh"/>
                     </connections>
                 </viewController>

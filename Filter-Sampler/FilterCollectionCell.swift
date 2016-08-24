@@ -9,6 +9,9 @@
 import UIKit
 
 class FilterCollectionCell: UICollectionViewCell {
+    
+    @IBOutlet var filterImageView: UIImageView!
+    @IBOutlet var filterNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
