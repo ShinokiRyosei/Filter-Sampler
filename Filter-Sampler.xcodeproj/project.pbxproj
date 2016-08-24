@@ -16,6 +16,7 @@
 		39551A9B1D6B7A22000BF9D0 /* Filter_SamplerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39551A9A1D6B7A22000BF9D0 /* Filter_SamplerUITests.swift */; };
 		39551AB41D6BF2F4000BF9D0 /* FilterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39551AB21D6BF2F4000BF9D0 /* FilterCollectionCell.swift */; };
 		39551AB51D6BF2F4000BF9D0 /* FilterCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39551AB31D6BF2F4000BF9D0 /* FilterCollectionCell.xib */; };
+		39A4488F1D6D5F37005D0F30 /* FilterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A4488E1D6D5F37005D0F30 /* FilterUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		39551A9C1D6B7A22000BF9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39551AB21D6BF2F4000BF9D0 /* FilterCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionCell.swift; sourceTree = "<group>"; };
 		39551AB31D6BF2F4000BF9D0 /* FilterCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCollectionCell.xib; sourceTree = "<group>"; };
+		39A4488E1D6D5F37005D0F30 /* FilterUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				39551A831D6B7A22000BF9D0 /* LaunchScreen.storyboard */,
 				39551A861D6B7A22000BF9D0 /* Info.plist */,
 				39551AB61D6BF4B7000BF9D0 /* FilterCell */,
+				39A4488E1D6D5F37005D0F30 /* FilterUtil.swift */,
 			);
 			path = "Filter-Sampler";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				39551A7D1D6B7A22000BF9D0 /* ViewController.swift in Sources */,
 				39551A7B1D6B7A22000BF9D0 /* AppDelegate.swift in Sources */,
 				39551AB41D6BF2F4000BF9D0 /* FilterCollectionCell.swift in Sources */,
+				39A4488F1D6D5F37005D0F30 /* FilterUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +502,7 @@
 				39551AA11D6B7A22000BF9D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39551AA21D6B7A22000BF9D0 /* Build configuration list for PBXNativeTarget "Filter-SamplerTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +511,7 @@
 				39551AA41D6B7A22000BF9D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39551AA51D6B7A22000BF9D0 /* Build configuration list for PBXNativeTarget "Filter-SamplerUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +520,7 @@
 				39551AA71D6B7A22000BF9D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
