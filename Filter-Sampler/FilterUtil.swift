@@ -9,6 +9,21 @@
 import UIKit
 
 class FilterUtil: NSObject {
+    
+    func switchFilters(originaal img: UIImage, index: Int) -> UIImage {
+        switch index {
+        case 0:
+            return self.sepiaFilter(original: img)
+        case 1:
+            return self.monoChromeFilter(original: img)
+        case 2:
+            return self.adjustmentFilter(original: img)
+        case 3:
+            return self.toneCurveFilter(original: img)
+        default:
+            return img
+        }
+    }
     // セピア
     func sepiaFilter(original img: UIImage) -> UIImage {
         guard let filter: CIFilter = CIFilter(name: "CISepiaTone") else { return img }
@@ -28,7 +43,7 @@ class FilterUtil: NSObject {
         return self.outputImage(filter, original: img)
     }
     // 色調節フィルタ
-    func ajustmentFilter(original img: UIImage) -> UIImage {
+    func adjustmentFilter(original img: UIImage) -> UIImage {
         guard let filter: CIFilter = CIFilter(name: "CIColorControl") else { return img }
         guard let ciImage: CIImage = CIImage(image: img) else { return img }
         filter.setValue(ciImage, forKey: kCIInputImageKey)

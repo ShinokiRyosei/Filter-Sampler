@@ -38,6 +38,10 @@
                 <constraint firstItem="aYk-97-JNs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pm5-y5-pjf"/>
             </constraints>
             <size key="customSize" width="108" height="155"/>
+            <connections>
+                <outlet property="filterImageView" destination="Fec-jX-9bq" id="jKl-eh-eJk"/>
+                <outlet property="filterNameLabel" destination="aYk-97-JNs" id="R68-8b-CVJ"/>
+            </connections>
             <point key="canvasLocation" x="334" y="499.5"/>
         </collectionViewCell>
     </objects>
