@@ -48,6 +48,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         imageView.image = originalImage
         picker.dismissViewControllerAnimated(true, completion: nil)
+        self.editOriginalImage()
     }
     
     func editOriginalImage() {
@@ -56,11 +57,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             let image: UIImage = FilterUtil().switchFilters(originaal: original, index: i)
             editedImages.append(image)
         }
+        self.filterCollectionView.reloadData()
     }
 }
 
 
-extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.editedImages.count
     }
@@ -80,4 +82,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         
         return cell
     }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return CGSizeMake(collectionView.frame.width/2-12, collectionView.frame.height)
+    }
+
 }
