@@ -17,6 +17,8 @@
 		39551AB41D6BF2F4000BF9D0 /* FilterCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39551AB21D6BF2F4000BF9D0 /* FilterCollectionCell.swift */; };
 		39551AB51D6BF2F4000BF9D0 /* FilterCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 39551AB31D6BF2F4000BF9D0 /* FilterCollectionCell.xib */; };
 		39A4488F1D6D5F37005D0F30 /* FilterUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A4488E1D6D5F37005D0F30 /* FilterUtil.swift */; };
+		39BB2BC21D729F64005BDA2A /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB2BC11D729F64005BDA2A /* JGProgressHUD.framework */; };
+		39BB2BC31D729F64005BDA2A /* JGProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 39BB2BC11D729F64005BDA2A /* JGProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		39BB2BC41D729F65005BDA2A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				39BB2BC31D729F64005BDA2A /* JGProgressHUD.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		39551A771D6B7A22000BF9D0 /* Filter-Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Filter-Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		39551A7A1D6B7A22000BF9D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +69,7 @@
 		39551AB21D6BF2F4000BF9D0 /* FilterCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCollectionCell.swift; sourceTree = "<group>"; };
 		39551AB31D6BF2F4000BF9D0 /* FilterCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterCollectionCell.xib; sourceTree = "<group>"; };
 		39A4488E1D6D5F37005D0F30 /* FilterUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterUtil.swift; sourceTree = "<group>"; };
+		39BB2BC11D729F64005BDA2A /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Carthage/Build/iOS/JGProgressHUD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39BB2BC21D729F64005BDA2A /* JGProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +101,7 @@
 		39551A6E1D6B7A22000BF9D0 = {
 			isa = PBXGroup;
 			children = (
+				39BB2BC11D729F64005BDA2A /* JGProgressHUD.framework */,
 				39551A791D6B7A22000BF9D0 /* Filter-Sampler */,
 				39551A8E1D6B7A22000BF9D0 /* Filter-SamplerTests */,
 				39551A991D6B7A22000BF9D0 /* Filter-SamplerUITests */,
@@ -152,6 +171,7 @@
 				39551A731D6B7A22000BF9D0 /* Sources */,
 				39551A741D6B7A22000BF9D0 /* Frameworks */,
 				39551A751D6B7A22000BF9D0 /* Resources */,
+				39BB2BC41D729F65005BDA2A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -419,6 +439,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Filter-Sampler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tv.shinoki.Filter-Sampler";
@@ -430,6 +454,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Filter-Sampler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "tv.shinoki.Filter-Sampler";
