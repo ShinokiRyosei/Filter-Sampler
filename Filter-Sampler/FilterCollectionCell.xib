@@ -13,14 +13,14 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="108" height="155"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fec-jX-9bq">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fec-jX-9bq">
                         <rect key="frame" x="0.0" y="0.0" width="108" height="115"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="115" id="xox-km-RT0"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYk-97-JNs">
-                        <rect key="frame" x="0.0" y="116" width="108" height="39"/>
+                        <rect key="frame" x="0.0" y="134" width="108" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -30,7 +30,7 @@
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="aYk-97-JNs" secondAttribute="trailing" id="4Xe-UX-OUa"/>
-                <constraint firstItem="aYk-97-JNs" firstAttribute="top" secondItem="Fec-jX-9bq" secondAttribute="bottom" constant="1" id="4hL-cY-xnY"/>
+                <constraint firstItem="aYk-97-JNs" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Fec-jX-9bq" secondAttribute="bottom" constant="1" id="4hL-cY-xnY"/>
                 <constraint firstItem="Fec-jX-9bq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Jsh-mf-Zke"/>
                 <constraint firstAttribute="bottom" secondItem="aYk-97-JNs" secondAttribute="bottom" id="RlU-yf-k8N"/>
                 <constraint firstItem="Fec-jX-9bq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hpM-7L-Kdl"/>
